@@ -5,11 +5,11 @@ g_names = ['Emma', 'Olivia', 'Sophia', 'Isabella', 'Ava', 'Mia', 'Abigail', 'Emi
 g_freq = [195028, 184528, 181132, 170559, 155844, 129088, 118713, 117626, 102470, 98419]
 df = pd.DataFrame{
     (
-        "Boys Names":b_names, 
-        "B Frequency":b_freq, 
-        "Girls Names":g_names,
-        "G Frequency":g_freq
+        "BoysNames":b_names, 
+        "BFrequency":b_freq, 
+        "GirlsNames":g_names,
+        "GFrequency":g_freq
     )
 }
 print(df)
-print [df.describe()]
+print (round[df.describe()])
