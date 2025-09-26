@@ -1,3 +1,4 @@
+
 import pandas as pd
 import random
 
@@ -7,17 +8,18 @@ years = ["Freshman","Sophomore","Junior","Senior","Victory Lap"]
 pathways = ["Early College","Engineering","Computer Science","Business","Marketing","Early Childhood Education","Culinary","Criminal Justice","Biomed"]
 names = []
 
-for i in range(20):
-    names.append(f"{random.choice(fNames)} {random.choice(lNames)}) 
+for i in range(2000):
+    names.append(f"{random.choice(fNames)} {random.choice(lNames)}")
 
 
 data = {
     "Name":names,
-    "Age":[random.randint(14,19) for _ in names],
+    "Age": [random.randint(14,19) for _ in names],
     "GPA": [round(random.uniform(0.3,4.5),2) for _ in names],
-    "Credits Completted": [random.randint(0,60) for _ in names]
-    "Year":[random.choice(years) for _ in names]
-    "Pathway":[random.choice(pathways) for _ in names]
+    "Credits Completted": [random.randint(0,60) for _ in names],
+    "Year" : [random.choice(years) for _ in names],
+    "Pathway" : [random.choice(pathways) for _ in names]
 }
 pennData = pd.DataFrame(data)
 print(pennData)
+pennData.to_csv('student_data.csv', index=False)
